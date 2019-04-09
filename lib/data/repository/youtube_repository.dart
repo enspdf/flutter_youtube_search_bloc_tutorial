@@ -25,7 +25,7 @@ class YoutubeRepository {
     _nextPageToken = nextPageToken;
   }
 
-  Future<BuiltList<SearchItem>> searchNextResultPage() async {
+  Future<BuiltList<SearchItem>> fetchNextResultPage() async {
     if (_lastSearchQuery == null) {
       throw SearchNotInitiatedException();
     }
